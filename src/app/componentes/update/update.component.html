@@ -1,0 +1,182 @@
+<table id="" class="dds__table" *ngIf="carros$">
+    <thead>
+      <tr class="dds__thead">
+        <th class="dds__th"></th>
+        <th class="dds__th">ID</th>
+        <th class="dds__th">Número da vaga</th>
+        <th class="dds__th">Placa do carro</th>
+        <th class="dds__th">Marca do carro</th>
+        <th class="dds__th">Modelo do carro</th>
+        <th class="dds__th">Cor do carro</th>
+        <th class="dds__th">Data de registro</th>
+        <th class="dds__th">Nome do responsável</th>
+        <th class="dds__th">Apartamento</th>
+        <th class="dds__th">Bloco do apartamento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="dds__tr" *ngFor="let item of carros$">
+        <td class="dds__td"><button class="dds__button dds__button--editorial-light" type="button" (click)="procurarUpdate(item.id)">Update</button></td>
+        <td class="dds__td">{{item.id}}</td>
+        <td class="dds__td">{{item.parkingSpotNumber}}</td>
+        <td class="dds__td">{{item.licensePlateCar}}</td>
+        <td class="dds__td">{{item.brandCar}}</td>
+        <td class="dds__td">{{item.modelCar}}</td>
+        <td class="dds__td">{{item.colorCar}}</td>
+        <td class="dds__td">{{item.registrationDate}}</td>
+        <td class="dds__td">{{item.responsibleName}}</td>
+        <td class="dds__td">{{item.apartment}}</td>
+        <td class="dds__td">{{item.block}}</td>
+      </tr>
+    </tbody>
+  </table>
+<form data-dds="form" class="dds__form dds__container">
+    <div>
+        <div class="dds__input-text__container">
+          <label id="sample-form-label" for="sample-form">Número da vaga</label>
+          <div class="dds__input-text__wrapper">
+            <input
+              type="text"
+              alt="parkingSpotNumber"
+              class="dds__input-text"
+              placeholder="Informe o número da vaga"
+              minlength="2"
+              maxlength="10"
+              name="numero-vaga"
+              id="sample-form"
+              required=""
+              aria-labelledby="sample-form-label sample-form-helper"
+              
+            />
+            <i class="dds__icon dds__input-text__icon--end" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="dds__input-text__container" data-dds="input-mask">
+          <label id="input-mask-label" for="input-mask-id">Placa do carro</label>
+          <div class="dds__input-text__wrapper">
+            <input
+              type="text"
+              alt="licensePlateCar"
+              title="placa-carro"
+              placeholder="Informe a placa do carro"
+              class="dds__input-text"
+              maxlength="7"
+              name="placa-carro"
+              id="input-mask-id"
+              required=""
+              aria-labelledby="input-mask-label input-mask-helper"
+              
+            />
+          </div>
+        </div>
+        <div class="dds__input-text__container" data-dds="input-mask">
+            <label id="input-mask-label" for="input-mask-id">Marca do carro</label>
+            <div class="dds__input-text__wrapper">
+              <input
+                type="text"
+                alt="brandCar"
+                title="marca-carro"
+                placeholder="Informe a marca do carro"
+                class="dds__input-text"
+                maxlength="20"
+                name="marca-carro"
+                id="input-mask-id"
+                required=""
+                aria-labelledby="input-mask-label input-mask-helper"
+                
+              />
+            </div>
+          </div>
+          <div class="dds__input-text__container" data-dds="input-mask">
+            <label id="input-mask-label" for="input-mask-id">Modelo do carro</label>
+            <div class="dds__input-text__wrapper">
+              <input
+                type="text"
+                alt="modelCar"
+                title="modelo-carro"
+                placeholder="Informe o modelo do carro"
+                class="dds__input-text"
+                maxlength="20"
+                name="modelo-carro"
+                id="input-mask-id"
+                required=""
+                aria-labelledby="input-mask-label input-mask-helper"
+                
+              />
+            </div>
+          </div>
+          <div class="dds__input-text__container" data-dds="input-mask">
+            <label id="input-mask-label" for="input-mask-id">Cor do carro</label>
+            <div class="dds__input-text__wrapper">
+              <input
+                type="text"
+                alt="colorCar"
+                title="cor-carro"
+                placeholder="Informe a cor do carro"
+                class="dds__input-text"
+                maxlength="20"
+                name="cor-carro"
+                id="input-mask-id"
+                required=""
+                aria-labelledby="input-mask-label input-mask-helper"
+                
+              />
+            </div>
+          </div>
+          <div class="dds__input-text__container" data-dds="input-mask">
+            <label id="input-mask-label" for="input-mask-id">Nome do responsável</label>
+            <div class="dds__input-text__wrapper">
+              <input
+                type="text"
+                alt="responsibleName"
+                title="nome-responsavel"
+                placeholder="Informe o nome do responsável"
+                class="dds__input-text"
+                maxlength="256"
+                name="nome-responsavel"
+                id="input-mask-id"
+                required=""
+                aria-labelledby="input-mask-label input-mask-helper"
+                
+              />
+            </div>
+          </div>
+          <div class="dds__input-text__container" data-dds="input-mask">
+            <label id="input-mask-label" for="input-mask-id">Número do apartamento</label>
+            <div class="dds__input-text__wrapper">
+              <input
+                type="text"
+                alt="apartment"
+                title="numero-apartamento"
+                placeholder="Informe o número do apartamento"
+                class="dds__input-text"
+                maxlength="10"
+                name="numero-apartamento"
+                id="input-mask-id"
+                required=""
+                aria-labelledby="input-mask-label input-mask-helper"
+                
+              />
+            </div>
+          </div>
+          <div class="dds__input-text__container" data-dds="input-mask">
+            <label id="input-mask-label" for="input-mask-id">Bloco do apartamento</label>
+            <div class="dds__input-text__wrapper">
+              <input
+                type="text"
+                alt="block"
+                title="bloco-apartamento"
+                placeholder="Informe o bloco do apartamento"
+                class="dds__input-text"
+                maxlength="10"
+                name="bloco-apartamento"
+                id="input-mask-id"
+                required=""
+                aria-labelledby="input-mask-label input-mask-helper"
+                
+              />
+            </div>
+          </div>
+      </div>
+      <button class="dds__button dds__button--editorial" type="button" (click)="atualizar()">Atualizar</button>
+</form>

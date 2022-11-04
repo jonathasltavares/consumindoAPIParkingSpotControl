@@ -1,0 +1,54 @@
+<section>
+    <form data-dds="form" class="dds__form dds__container">
+      
+      <div class="dds__input-text__container">
+        <label id="text-input-label-428675678" for="text-input-control-428675678">ID do carro para procurar</label>
+        <div class="dds__input-text__wrapper dds__input-text__wrapper--button">
+          <input
+            type="text"
+            class="dds__input-text"
+            name="text-input-control-428675678"
+            id="IDinput"
+            placeholder="digite o id do carro que deseja procurar"
+            required=""
+            aria-labelledby="text-input-label-428675678 text-input-helper-428675678"
+          />
+          <button class="dds__button dds__button--transactional" type="button" (click)="procurarCarro()">Procurar</button>
+          <div id="text-input-error-428675678" class="dds__invalid-feedback">Error Message</div>
+        </div>
+      </div>
+    </form>
+    
+    <table id="" class="dds__table" *ngIf="carros$">
+      <thead>
+        <tr class="dds__thead">
+          <th class="dds__th">ID</th>
+          <th class="dds__th">Número da vaga</th>
+          <th class="dds__th">Placa do carro</th>
+          <th class="dds__th">Marca do carro</th>
+          <th class="dds__th">Modelo do carro</th>
+          <th class="dds__th">Cor do carro</th>
+          <th class="dds__th">Data de registro</th>
+          <th class="dds__th">Nome do responsável</th>
+          <th class="dds__th">Apartamento</th>
+          <th class="dds__th">Bloco do apartamento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="dds__tr" *ngFor="let item of carros$">
+          <td class="dds__td">{{item.id}}</td>
+          <td class="dds__td">{{item.parkingSpotNumber}}</td>
+          <td class="dds__td">{{item.licensePlateCar}}</td>
+          <td class="dds__td">{{item.brandCar}}</td>
+          <td class="dds__td">{{item.modelCar}}</td>
+          <td class="dds__td">{{item.colorCar}}</td>
+          <td class="dds__td">{{item.registrationDate}}</td>
+          <td class="dds__td">{{item.responsibleName}}</td>
+          <td class="dds__td">{{item.apartment}}</td>
+          <td class="dds__td">{{item.block}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
